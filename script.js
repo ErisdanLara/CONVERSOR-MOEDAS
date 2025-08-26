@@ -1,8 +1,9 @@
 const convertButton = document.querySelector(".convert-button")
 const currencySelect = document.querySelector(".converter-para")
+const currencySelectDe = document.querySelector(".converter-de")
 
 
-function convertvalue() {
+function convertvalue() { //função para converter o valor re real para outra moeda
     const inputCurrencyValue = document.querySelector(".input-currency").value
     const currencyValueToConvert = document.querySelector(".valor-moeda-para-troca") //moeda para converter
     const currencyValueConverted = document.querySelector(".valor-moeda") //outras moedas
@@ -34,6 +35,9 @@ function convertvalue() {
     }
 
 
+
+
+
     currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-br", {
         style: "currency",
         currency: "BRL"
@@ -41,11 +45,11 @@ function convertvalue() {
 
 }
 
-function changeCurrency(){
+function changeCurrency() {
     const currencyName = document.getElementById("moeda")
     const currencyImg = document.querySelector(".bandeira-US")
 
-    
+
     if (currencySelect.value == "dolar") {
         currencyName.innerHTML = "Dolar Americano"
         currencyImg.src = "assets/estados-unidos (1) 1.png"
@@ -63,9 +67,41 @@ function changeCurrency(){
 
 }
 
+
+
+
+function trocarImagens() {
+
+    const currencyName = document.getElementById("moeda-1")
+    const converterImg = document.querySelector(".bandeira-BR")
+
+    if (currencySelectDe.value == "real") {
+        currencyName.innerHTML = "Real"
+        converterImg.src = "assets/brasil-2.png"
+    }
+    if (currencySelectDe.value == "dolar") {
+        currencyName.innerHTML = "dolar americano"
+        converterImg.src = "assets/estados-unidos (1) 1.png"
+    }
+    if (currencySelectDe.value == "euro") {
+        currencyName.innerHTML = "Euro"
+        converterImg.src = "assets/logo-euro.png"
+    }
+    if (currencySelectDe.value == "peso") {
+        currencyName.innerHTML = "Peso Cubano"
+        converterImg.src = "assets/bandeira-cuba.png"
+    }
+
+    convertvalue()
+
+}
+
+
 convertButton.addEventListener("click", convertvalue)
 
 currencySelect.addEventListener("change", changeCurrency)
+
+currencySelectDe.addEventListener("click", trocarImagens)
 
 ////////////////////////////////////TRECHO DO CODIGO FEITO POR MIM ///////////////////////////////////////
 
