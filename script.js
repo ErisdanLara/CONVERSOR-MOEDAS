@@ -33,15 +33,40 @@ function convertvalue() { //função para converter o valor re real para outra m
             currency: "USD"
         }).format(inputCurrencyValue * pesoToday)
     }
+    if (currencySelect.value == "real") {
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-br", {
+            style: "currency",
+            currency: "BRL"
+        }).format(inputCurrencyValue * pesoToday)
+    }
 
-
-
-
-
-    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-br", {
+/////////////////////////////////////CODIGO PARA TROCAR A MOEDA DE CONVERSÃO ///////////////////////////////////////
+    if (currencySelectDe.value == "dolar") { //se o valor selecionado for dolar então faça isso
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(inputCurrencyValue)
+    }
+    if (currencySelectDe.value == "euro") { //se o valor selecionado for dolar então faça isso
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("de-DE", {
+            style: "currency",
+            currency: "EUR"
+        }).format(inputCurrencyValue)
+    }
+    if (currencySelectDe.value == "peso") { //se o valor selecionado for dolar então faça isso
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD"
+        }).format(inputCurrencyValue)
+    }
+    if (currencySelectDe.value == "real") { //se o valor selecionado for dolar então faça isso
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-br", {
         style: "currency",
         currency: "BRL"
-    }).format(inputCurrencyValue)
+        }).format(inputCurrencyValue)
+    }
+
+    
 
 }
 
@@ -62,6 +87,10 @@ function changeCurrency() {
         currencyName.innerHTML = "Peso cubano"
         currencyImg.src = "assets/bandeira-cuba.png"
     }
+    if (currencySelect.value == "real") {
+        currencyName.innerHTML = "Real"
+        currencyImg.src = "assets/brasil-2.png"
+    }
 
     convertvalue()
 
@@ -70,7 +99,7 @@ function changeCurrency() {
 
 
 
-function trocarImagens() {
+function changeCurrency2() {
 
     const currencyName = document.getElementById("moeda-1")
     const converterImg = document.querySelector(".bandeira-BR")
@@ -101,7 +130,7 @@ convertButton.addEventListener("click", convertvalue)
 
 currencySelect.addEventListener("change", changeCurrency)
 
-currencySelectDe.addEventListener("click", trocarImagens)
+currencySelectDe.addEventListener("click", changeCurrency2)
 
 ////////////////////////////////////TRECHO DO CODIGO FEITO POR MIM ///////////////////////////////////////
 
