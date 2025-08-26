@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+}
+
+body {
+    background: #8A51FC;
+}
+
+.logo {
+    width: 230px;
+    height: 230px;
+    display: block;
+    margin: 12px auto;
+}
+
+main {
+    width: 372px;
+    height: 650px;
+    border-radius: 20px;
+    background: #F4F4F4;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.converter {
+    display: block;
+    color: #777;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    background-color: rgba(244, 244, 244, 0.9);
+}
+
+b {
+    color: #777;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    background-color: rgba(244, 244, 244, 0.9);
+}
+
+.converter-de {
+    width: 327px;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid #BBB;
+    background: #FFF;
+    color: #555;
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.convertido {
+    display: block;
+    margin-top: 25px;
+    color: #777;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    background-color: rgba(244, 244, 244, 0.9);
+}
+
+.converter-para {
+    width: 327px;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid #BBB;
+    background: #FFF;
+    color: #555;
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.valor {
+    display: block;
+    margin-top: 25px;
+    background-color: rgba(244, 244, 244, 0.9);
+    color: #777;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+input {
+    width: 327px;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid #BBB;
+    background: #FFF;
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.15);
+    color: #555;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+button {
+    width: 327px;
+    height: 48px;
+    border-radius: 5px;
+    background: #772FD3;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-top: 23px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #5c23a8;
+}
+
+button:active {
+    background: #3e166f;
+}
+
+section {
+    width: 327px;
+    height: 276px;
+    border-radius: 20px;
+    border: 1px solid #772FD3;
+    background-color: rgba(244, 244, 244, 0.9);
+    margin-top: 25px;
+    padding: 20px;
+}
+
+.real {
+    background-color: rgba(244, 244, 244, 0.9);
+}
+
+img {
+    display: block;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(244, 244, 244, 0.9);
+    margin: 0 auto;
+}
+
+.nome-moeda {
+    color: #777;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    background-color: rgba(244, 244, 244, 0.9);
+    text-align: center;
+}
+
+.valor-moeda, .valor-moeda-para-troca {
+    color: #555;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 18px;
+    background-color: rgba(244, 244, 244, 0.9);
+    text-align: center;
+}
+
+.seta {
+    margin: 15px auto;
+}
+
+.dolar-euro {
+    background-color: rgba(244, 244, 244, 0.9);
+}
